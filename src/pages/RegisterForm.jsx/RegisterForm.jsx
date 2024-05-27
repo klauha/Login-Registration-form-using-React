@@ -1,18 +1,23 @@
 import React from 'react'
-import './LoginForm.css'
-import { FaUser,FaLock } from "react-icons/fa";
+import './RegisterForm.css'
+import { FaUser,FaLock, FaEnvelope } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
   return (
 
     <div className='wrapper'>
         <form action = "">
-            <h1>Login</h1>
+            <h1>Register</h1>
             <div className="input-box">
                 <input type="text" placeholder="Username" required />
                 <FaUser className='icon'/>
+            </div>
+            <div className="input-box">
+                <input type="email" placeholder="Email" required />
+                <FaEnvelope className='icon'/>
             </div>
             <div className="input-box">
                 <input type="password" placeholder="Password" required />
@@ -20,7 +25,7 @@ export const LoginForm = () => {
             </div>
             <button type="submit">Login</button>
             <div className="register-link">
-                <p>Don't have an account? <a href="#">Register</a></p>
+            <p>Already have an account? <Link to="/login">Login</Link></p>
             </div>
         </form>
 
